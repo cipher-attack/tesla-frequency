@@ -1,0 +1,4 @@
+nohup: ignoring input
+- [32mready[39m started server on 127.0.0.1:3000, url: http://127.0.0.1:3000
+- [36minfo[39m Disabled SWC as replacement for Babel because of custom Babel configuration ".babelrc" https://nextjs.org/docs/messages/swc-disabled
+- [35mevent[39m compiled client and server successfully in 1960 ms (18 modules)
