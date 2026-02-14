@@ -1,11 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    workerThreads: false, // ይህ ፕሮሰሱ እንዳይገደል ያደርገዋል
-    cpus: 1
-  },
-  reactStrictMode: false,
-  swcMinify: false
+  // ምንም ልዩ ኮንፊግ አያስፈልገውም፣ Next.js ራሱ ያስተካክለዋል
 };
 
 module.exports = nextConfig;
