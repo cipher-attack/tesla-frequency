@@ -18,16 +18,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          # ካሽ ማድረጉን ለጊዜው እናቆመዋለን ምክንያቱም ከ lockfile ጋር እንዳይጋጭ
+          # cache: 'npm' 
 
       - name: Install Dependencies
-        # --force እና ለ Linux የሚሆን SWC እንዲጭን እናዝዘዋለን
+        # --no-package-lock መጠቀማችን የቲርሙክስ እና የሊኑክስ ፀብን ይፈታዋል
         run: |
-          npm install --force
-          npm install @next/swc-linux-x64-gnu
+          npm install --no-package-lock --force
+          npm install @next/swc-linux-x64-gnu --no-package-lock
 
       - name: Build Next.js
-        # Build ሲያደርግ የሚፈጠሩ የ lint ስህተቶች ካሉ እንዳያቆመው
         run: npm run build
         env:
           NEXT_TELEMETRY_DISABLED: 1
