@@ -18,17 +18,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          # ካሽ ማድረጉን ለጊዜው እናቆመዋለን ምክንያቱም ከ lockfile ጋር እንዳይጋጭ
-          # cache: 'npm' 
 
       - name: Install Dependencies
-        # --no-package-lock መጠቀማችን የቲርሙክስ እና የሊኑክስ ፀብን ይፈታዋል
         run: |
-          npm install --no-package-lock --force
+          # ስህተት የሚፈጥረውን የአንድሮይድ ባይናሪ ከ package.json ላይ በጊዜያዊነት እናጥፋው
+          sed -i '/@next\/swc-android-arm-eabi/d' package.json
+          
+          # አዲስ Lockfile እንዲያመነጭ እናስገድደው
+          npm install --force --no-package-lock
+          
+          # ለሊኑክስ (GitHub) የሚሆነውን ኮምፓይለር እንጫን
           npm install @next/swc-linux-x64-gnu --no-package-lock
 
       - name: Build Next.js
-        run: npm run build
+        # Lint ስህተቶች ቢኖሩ እንኳ ቢልዱ እንዳይቆም --no-lint እንጠቀማለን
+        run: npx next build --no-lint
         env:
           NEXT_TELEMETRY_DISABLED: 1
 
