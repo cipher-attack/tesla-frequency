@@ -39,4 +39,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 
 
-#### *credit =>> Gemini Ai#
+#### **credit =>> Gemini Ai**
