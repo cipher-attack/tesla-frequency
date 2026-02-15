@@ -1,4 +1,4 @@
-###i build this with ai 
+## i build this with ai
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
@@ -39,4 +39,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 
 
-#credit =>> Gemini Ai
+#### *credit =>> Gemini Ai#
