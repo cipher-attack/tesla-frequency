@@ -1,6 +1,6 @@
-##**it's not work for NOW**##
+**##it's not work for NOW##**
 
-## i build this with ai
+## I build this with ai
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
